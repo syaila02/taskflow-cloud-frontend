@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-flow-primary: #2563EB;
+    --color-flow-primary-hover: #1D4ED8;
+    --color-flow-dark: #0F172A;
+    --color-flow-canvas: #F8FAFC;
+    --color-flow-surface: #FFFFFF;
+    --color-flow-border: #E2E8F0;
+    --color-flow-muted: #64748B;
+  }
+
+  body {
+    background-color: theme('colors.flow.canvas');
+    color: theme('colors.flow.dark');
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom scrollbar for clean Notion/Linear-like aesthetics */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
