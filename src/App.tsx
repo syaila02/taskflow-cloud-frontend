@@ -4,6 +4,8 @@ import { AppLayout } from '@/components/layout/AppLayout';
 import { ProtectedRoute } from '@/components/layout/ProtectedRoute';
 import { WorkspacePreview } from '@/pages/dashboard/WorkspacePreview';
 import { ModulePlaceholder } from '@/pages/ModulePlaceholder';
+import { ProjectListPage } from '@/pages/projects/ProjectListPage';
+import { ProjectDetailPage } from '@/pages/projects/ProjectDetailPage';
 
 export const App: React.FC = () => {
   return (
@@ -22,7 +24,8 @@ export const App: React.FC = () => {
 
           {/* Rute Modul Berikutnya (ditangani dengan graceful placeholder) */}
           <Route path="/tasks" element={<ModulePlaceholder />} />
-          <Route path="/projects" element={<ModulePlaceholder />} />
+          <Route path="/projects" element={<ProjectListPage />} />
+          <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
           <Route path="/board" element={<ModulePlaceholder />} />
           <Route path="/calendar" element={<ModulePlaceholder />} />
           <Route path="/team" element={<ModulePlaceholder />} />
