@@ -7,6 +7,7 @@ import { WorkspacePreview } from '@/pages/dashboard/WorkspacePreview';
 import { MyTasksPage } from '@/pages/tasks/MyTasksPage';
 import { BoardPage } from '@/pages/board/BoardPage';
 import { CalendarPage } from '@/pages/calendar/CalendarPage';
+import { TeamPage } from '@/pages/team/TeamPage';
 import { ModulePlaceholder } from '@/pages/ModulePlaceholder';
 import { ProjectListPage } from '@/pages/projects/ProjectListPage';
 import { ProjectDetailPage } from '@/pages/projects/ProjectDetailPage';
@@ -43,7 +44,8 @@ export const App: React.FC = () => {
           <Route path="/board" element={<BoardPage />} />
           {/* Calendar — Jadwal & Deadline Bulanan */}
           <Route path="/calendar" element={<CalendarPage />} />
-          <Route path="/team" element={<ModulePlaceholder />} />
+          {/* Team — Manajemen Anggota & Kolaborasi */}
+          <Route path="/team" element={<TeamPage />} />
           <Route path="/settings" element={<ModulePlaceholder />} />
 
           {/* Catch-all 404 / Unmatched Route */}

@@ -37,7 +37,7 @@ const mainNavItems: NavItem[] = [
   { label: 'Projects', path: '/projects', icon: FolderKanban },
   { label: 'Board', path: '/board', icon: Kanban },
   { label: 'Calendar', path: '/calendar', icon: Calendar },
-  { label: 'Team', path: '/team', icon: Users, badge: 'Soon' },
+  { label: 'Team', path: '/team', icon: Users },
 ];
 
 export const Sidebar: React.FC<SidebarProps> = ({
