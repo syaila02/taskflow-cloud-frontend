@@ -6,6 +6,7 @@ import { DashboardPage } from '@/pages/dashboard/DashboardPage';
 import { WorkspacePreview } from '@/pages/dashboard/WorkspacePreview';
 import { MyTasksPage } from '@/pages/tasks/MyTasksPage';
 import { BoardPage } from '@/pages/board/BoardPage';
+import { CalendarPage } from '@/pages/calendar/CalendarPage';
 import { ModulePlaceholder } from '@/pages/ModulePlaceholder';
 import { ProjectListPage } from '@/pages/projects/ProjectListPage';
 import { ProjectDetailPage } from '@/pages/projects/ProjectDetailPage';
@@ -40,7 +41,8 @@ export const App: React.FC = () => {
           <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
           {/* Board — Kanban Workflow Visual */}
           <Route path="/board" element={<BoardPage />} />
-          <Route path="/calendar" element={<ModulePlaceholder />} />
+          {/* Calendar — Jadwal & Deadline Bulanan */}
+          <Route path="/calendar" element={<CalendarPage />} />
           <Route path="/team" element={<ModulePlaceholder />} />
           <Route path="/settings" element={<ModulePlaceholder />} />
 
