@@ -4,6 +4,7 @@ import { AppLayout } from '@/components/layout/AppLayout';
 import { ProtectedRoute } from '@/components/layout/ProtectedRoute';
 import { DashboardPage } from '@/pages/dashboard/DashboardPage';
 import { WorkspacePreview } from '@/pages/dashboard/WorkspacePreview';
+import { MyTasksPage } from '@/pages/tasks/MyTasksPage';
 import { ModulePlaceholder } from '@/pages/ModulePlaceholder';
 import { ProjectListPage } from '@/pages/projects/ProjectListPage';
 import { ProjectDetailPage } from '@/pages/projects/ProjectDetailPage';
@@ -32,8 +33,8 @@ export const App: React.FC = () => {
           {/* Rute Preview Showcase Komponen (Tahap 2) tetap dipertahankan */}
           <Route path="/preview" element={<WorkspacePreview />} />
 
-          {/* Rute Modul Berikutnya (ditangani dengan graceful placeholder) */}
-          <Route path="/tasks" element={<ModulePlaceholder />} />
+          {/* My Tasks — Manajemen Seluruh Tugas User */}
+          <Route path="/tasks" element={<MyTasksPage />} />
           <Route path="/projects" element={<ProjectListPage />} />
           <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
           <Route path="/board" element={<ModulePlaceholder />} />

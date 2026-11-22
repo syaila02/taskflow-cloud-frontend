@@ -1,6 +1,6 @@
 import { apiClient } from '@/services/api/apiClient';
 import type { ApiSuccessResponse } from '@/types/api';
-import type { CreateProjectInput, Project } from '@/types/project';
+import type { CreateProjectInput, Project, ProjectMember } from '@/types/project';
 
 /**
  * Service komunikasi API proyek (/api/v1/projects).
@@ -21,8 +21,14 @@ export async function createProject(input: CreateProjectInput): Promise<ApiSucce
   return response.data;
 }
 
+export async function getProjectMembers(projectId: string): Promise<ApiSuccessResponse<{ members: ProjectMember[] }>> {
+  const response = await apiClient.get<ApiSuccessResponse<{ members: ProjectMember[] }>>(`/projects/${projectId}/members`);
+  return response.data;
+}
+
 export const projectService = {
   getProjects,
   getProjectDetail,
   createProject,
+  getProjectMembers,
 };

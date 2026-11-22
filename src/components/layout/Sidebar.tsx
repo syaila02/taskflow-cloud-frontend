@@ -33,7 +33,7 @@ interface NavItem {
 
 const mainNavItems: NavItem[] = [
   { label: 'Overview', path: '/', icon: LayoutDashboard },
-  { label: 'My Tasks', path: '/tasks', icon: CheckSquare, badge: 'Soon' },
+  { label: 'My Tasks', path: '/tasks', icon: CheckSquare },
   { label: 'Projects', path: '/projects', icon: FolderKanban },
   { label: 'Board', path: '/board', icon: Kanban, badge: 'Soon' },
   { label: 'Calendar', path: '/calendar', icon: Calendar, badge: 'Soon' },

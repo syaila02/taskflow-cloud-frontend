@@ -21,3 +21,12 @@ export interface CreateProjectInput {
   name: string;
   description?: string;
 }
+
+export interface ProjectMember {
+  id: string;
+  projectId: string;
+  userId: string;
+  role: ProjectRole;
+  joinedAt: string;
+  user: User;
+}
