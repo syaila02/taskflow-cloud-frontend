@@ -5,6 +5,7 @@ import { ProtectedRoute } from '@/components/layout/ProtectedRoute';
 import { DashboardPage } from '@/pages/dashboard/DashboardPage';
 import { WorkspacePreview } from '@/pages/dashboard/WorkspacePreview';
 import { MyTasksPage } from '@/pages/tasks/MyTasksPage';
+import { BoardPage } from '@/pages/board/BoardPage';
 import { ModulePlaceholder } from '@/pages/ModulePlaceholder';
 import { ProjectListPage } from '@/pages/projects/ProjectListPage';
 import { ProjectDetailPage } from '@/pages/projects/ProjectDetailPage';
@@ -37,7 +38,8 @@ export const App: React.FC = () => {
           <Route path="/tasks" element={<MyTasksPage />} />
           <Route path="/projects" element={<ProjectListPage />} />
           <Route path="/projects/:projectId" element={<ProjectDetailPage />} />
-          <Route path="/board" element={<ModulePlaceholder />} />
+          {/* Board — Kanban Workflow Visual */}
+          <Route path="/board" element={<BoardPage />} />
           <Route path="/calendar" element={<ModulePlaceholder />} />
           <Route path="/team" element={<ModulePlaceholder />} />
           <Route path="/settings" element={<ModulePlaceholder />} />

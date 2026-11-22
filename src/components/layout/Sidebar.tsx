@@ -35,7 +35,7 @@ const mainNavItems: NavItem[] = [
   { label: 'Overview', path: '/', icon: LayoutDashboard },
   { label: 'My Tasks', path: '/tasks', icon: CheckSquare },
   { label: 'Projects', path: '/projects', icon: FolderKanban },
-  { label: 'Board', path: '/board', icon: Kanban, badge: 'Soon' },
+  { label: 'Board', path: '/board', icon: Kanban },
   { label: 'Calendar', path: '/calendar', icon: Calendar, badge: 'Soon' },
   { label: 'Team', path: '/team', icon: Users, badge: 'Soon' },
 ];
